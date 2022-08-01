@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diferenciar nacionalidade</title>
+</head>
+
+<body>
+    <h1>Vamos descobrir se você é gringo ou não</h1>
+    <p>Digite a sua nacionalidade:</p>
+    <input type="text" name="txt" id="txt">
+    <input type="button" value="Descobrir" onclick="descobrir()">
+    <div id="resultado"></div>
+    <script>
+        function descobrir() {
+            var nac = window.document.getElementById('txt')
+            var res = window.document.getElementById('resultado')
+            if (nac.value == 'brasileiro') { // o .value é para indicar o texto como string, e não como valor
+                res.innerText = 'Você é brasileiro!'
+            } else {
+                res.innerText = 'Você é gringo!'
+            }
+        }
+    </script>
+</body>
+
+</html>
